@@ -1,17 +1,19 @@
 <template>
   <div>
-    <p v-for="(item, index) in fetchedAsk">
-      <router-link :to="`/item/${item.id}`">{{item.title}}</router-link>
-      <small>{{item.time_ago}} by {{item.user}}</small>
-    </p>
+    <ListItem></ListItem>
   </div>
 </template>
 
 <script>
-import {mapState, mapGetters} from 'vuex';
+import ListItem from "@/components/ListItem";
+// import {mapGetters} from 'vuex';
 export default {
   name: "AskView",
+  components:{
+    ListItem
+  },
   computed: {
+    // todo store.state의 데이터바인딩 방식
     // # 1
     // ask() {
     //   return this.$store.state;
@@ -23,9 +25,9 @@ export default {
     // }),
 
     // # 3
-    ...mapGetters([
-       'fetchedAsk'
-    ]),
+    // ...mapGetters([
+    //    'fetchedAsk'
+    // ]),
   },
   created() {
     this.$store.dispatch('FETCH_ASK');
@@ -34,5 +36,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

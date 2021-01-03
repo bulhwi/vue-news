@@ -1,24 +1,18 @@
 <template>
   <div>
-    <p v-for="(item, index) in this.$store.state.jobs">
-      <a :href="item.url">{{item.title}}</a>
-      <small>{{item.time_ago}} by {{item.domain}}</small>
-    </p>
+    <ListItem></ListItem>
   </div>
 </template>
 
 <script>
+import ListItem from "@/components/ListItem";
 export default {
   name: "JobsView",
-  created() {
-    // fetchJobsList()
-    //   .then(response => this.jobs = response.data)
-    //   .catch(error => console.log(error));
-    this.$store.dispatch('FETCH_JOBS');
+  components:{
+    ListItem
   }
 }
 </script>
 
 <style scoped>
-
 </style>

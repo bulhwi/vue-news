@@ -1,22 +1,17 @@
 <template>
   <div>
-    <p v-for="(item, index) in this.$store.state.news">
-      <a :href="item.url">
-        {{item.title}}
-      </a>
-      <small>
-        {{item.time_ago}} by
-        <router-link :to="`/user/${item.user}`">{{item.user}}</router-link>
-      </small>
-    </p>
+    <ListItem></ListItem>
   </div>
 </template>
 
 <script>
-// import {fetchNewsList} from "../api/index"
+import ListItem from "@/components/ListItem";
 
 export default {
   name: "NewsView",
+  components:{
+    ListItem
+  },
   // data() {
   //   return {
   //     news: []
@@ -39,7 +34,7 @@ export default {
     //   .catch(error => console.log(error));
 
     // todo 3. 분리된 api를 vuex actions를 통하여 호출하고 vuex store.state 를 통한 상태관리 패턴으로 개선함.
-    this.$store.dispatch('FETCH_NEWS');
+    // this.$store.dispatch('FETCH_NEWS');
 
   }
 }
