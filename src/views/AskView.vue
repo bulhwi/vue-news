@@ -6,12 +6,15 @@
 
 <script>
 import ListItem from "@/components/ListItem";
+import bus from "@/utils/bus";
+import ListMixin from "@/mixins/ListMixin";
 // import {mapGetters} from 'vuex';
 export default {
   name: "AskView",
   components:{
     ListItem
   },
+  mixins:[ListMixin],
   computed: {
     // todo store.state의 데이터바인딩 방식
     // # 1
@@ -29,9 +32,16 @@ export default {
     //    'fetchedAsk'
     // ]),
   },
-  created() {
-    this.$store.dispatch('FETCH_ASK');
-  }
+  // created() {
+  //   bus.$emit('start:spinner');
+  //   this.$store.dispatch('FETCH_ASK')
+  //       .then(() => {
+  //         bus.$emit('end:spinner');
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //       });
+  // }
 }
 </script>
 
