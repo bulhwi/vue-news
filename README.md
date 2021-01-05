@@ -1,5 +1,6 @@
+vuejs를 사용하며 놓치고 가는 부분이 있을수 있으니 다시 보자;;;
 # vue-news
-
+[인프런강의 vuejs 완벽가이드](https://www.inflearn.com/course/vue-js/dashboard)
 ## Project setup
 ```
 npm install
