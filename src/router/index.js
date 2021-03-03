@@ -6,6 +6,8 @@ import JobsView from '../views/JobsView.vue';  // HOC 에  의해 사용하지 �
 import ItemView from '../views/ItemView.vue';
 import UserView from '../views/UserView.vue';
 import createListView from '../views/CreateListView'
+import {store} from '../store/index.js'
+import bus from "@/utils/bus";
 Vue.use(VueRouter)
 
 const routes = [
@@ -18,6 +20,17 @@ const routes = [
       path: '/news',
       component: NewsView,
       // component: createListView('NewsView'), //HOC 사용시
+      beforeEnter: (to, from, next) => {
+        bus.$emit('start:spinner');
+        store.dispatch('FETCH_LIST', to.name)
+          .then(() => {
+            bus.$emit('end:spinner');
+            next();
+          })
+          .catch((error => {
+            console.log(error);
+          }));
+      }
     },
     {
       name:'ask',
