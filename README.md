@@ -27,6 +27,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### Hacker News open API 사용함.
 깃헙 [hacker-news-pwas(github)](https://github.com/tastejs/hacker-news-pwas/blob/master/docs/api.md)
 
+open api : https://jsonplaceholder.typicode.com/users/1
+
 ### [HOC (higher-order component)](https://joshua1988.github.io/vue-camp/design/pattern5.html)  
 기본적으로 리액트의 하이 오더 컴포넌트에서 기원된 것임.  
 [리액트의 하이오더컴포넌트 소개](https://reactjs.org/docs/higher-order-components.html)
@@ -48,4 +50,5 @@ HOC를 많이 사용하면 할수록 컴포넌트의 깊이가 깊어지면서(�
 2. 컴포넌트 라이프 사이클 훅  
     - created : (컴포넌트 생성)되자마자 호출되는 로직
     
-    
+
+

@@ -7,6 +7,7 @@
 <script>
 import ListItem from "@/components/ListItem";
 import ListMixin from "@/mixins/ListMixin";
+import bus from "@/utils/bus";
 // import bus from "@/utils/bus";
 export default {
   name: "NewsView",
@@ -45,7 +46,7 @@ export default {
     //     .catch((error => {
     //       console.log(error);
     //     }));
-  }
+  },
 }
 </script>
 
