@@ -56,3 +56,5 @@ HOC를 많이 사용하면 할수록 컴포넌트의 깊이가 깊어지면서(�
 3. Controlled - 결합력이 높은 컴포넌트
 4. Renderless - 데이터 처리 컴포넌트
 
+[render 함수 api 문서](https://vuejs.org/v2/guide/render-function.html#ad)                      
+[Vue cli 배포 관련 문서](https://cli.vuejs.org/guide/deployment.html#gitlab-pages)
